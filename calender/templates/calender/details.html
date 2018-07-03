@@ -1,0 +1,12 @@
+{% extends 'calender/base.html' %}
+{% block content %}
+<div class="container jumbotron">
+    <button onclick="window.location='{% url 'index' %}' " class="btn btn-default">Go Back</button>
+    <hr>
+    <h1>{{ entry.name }}</h1>
+
+    <h2>{{ entry.date | date:"Y M d" }}</h2>
+
+    <h3>{{ entry.description|truncatechars:100 }}</h3>
+</div>
+{% endblock %}
